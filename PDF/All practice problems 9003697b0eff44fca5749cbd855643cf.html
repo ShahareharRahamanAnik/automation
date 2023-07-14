@@ -1,0 +1,1531 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>All practice problems:</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="9003697b-0eff-44fc-a574-9cbd855643cf" class="page sans"><header><h1 class="page-title">All practice problems:</h1><p class="page-description"></p></header><div class="page-body"><h2 id="981ef1ec-f051-4a10-9c3f-26759d57da80" class=""><span style="border-bottom:0.05em solid"><mark class="highlight-blue">1. Write a Java program to calculate the area of a Quadrangular:</mark></span></h2><pre id="bfc4277a-aac9-4017-89c4-2ba63157b029" class="code code-wrap"><code>package Practice_problem_2;
+
+import java.util.Scanner;
+
+public class Quadrangular {
+    public void Squre(int x) {
+        int p = x * x;
+        System.out.println(&quot;The area of a the square is: \n &quot; + &quot;(&quot;+x+&quot;)^2 \n =&quot;+ p + &quot; unit square&quot;);
+
+    }
+    public void Rectangle(int x,int y) {
+        int p = x * y;
+        System.out.println(&quot;The area of a the Rectangle is: \n &quot; + &quot;(&quot;+x+&quot;x&quot;+y+&quot;) \n =&quot;+ p + &quot; unit square&quot;);
+
+    }
+    public void Parallelogram(int x,int y) {
+        int p = x * y;
+        System.out.println(&quot;The area of a the Parallelogram is: \n &quot; + &quot;(&quot;+x+&quot;x&quot;+y+&quot;) \n =&quot;+ p + &quot; unit square&quot;);
+
+    }
+    public void Rhombus(int x,int y) {
+        float p = (float) (.5 * x * y);
+        System.out.println(&quot;The area of a the Rhombus is: \n &quot; + &quot;.5x&quot;+x+&quot;x&quot;+y+&quot; \n =&quot;+ p + &quot; unit square&quot;);
+
+    }
+    public void Trapezium(int x,int y, int z) {
+        float p = (float) (.5 * (x + y) * z);
+        System.out.println(&quot;The area of a the Trapezium is: \n &quot; + &quot;.5x(&quot;+x+&quot;+&quot;+y+&quot;)x&quot;+z+&quot; \n =&quot;+ p + &quot; unit square&quot;);
+
+    }
+    public void Kite(int x,int y) {
+        float p = (float) (.5 * x * y);
+        System.out.println(&quot;The area of a the Kite is: \n &quot; + &quot;.5x&quot;+x+&quot;x&quot;+y+&quot; \n =&quot;+ p + &quot; unit square&quot;);
+
+    }
+    public static void main(String[] args) {
+        Quadrangular qua = new Quadrangular();
+        Scanner ss = new Scanner(System.in);
+        System.out.print(&quot;What type of Quadrangular&#x27;s area do you want to calculate? \n 1.Square \n 2.Rectangle \n 3.Parallelogram \n 4.Rhombus \n 5.Trapezium \n 6.Kite \n Type a number which you want:&quot;);
+        int p = ss.nextInt();
+        if (p==1){
+            System.out.println(&quot;You have chosen Square for counting area... \n put a side of square:&quot;);
+            int x = ss.nextInt();
+            qua.Squre(x);
+        } else if (p==2){
+            System.out.println(&quot;You have chosen Rectangle for counting area... \n put the height of the Rectangle:&quot;);
+            int x = ss.nextInt();
+            System.out.println(&quot;put the width of the Rectangle:&quot;);
+            int y = ss.nextInt();
+            qua.Rectangle(x,y);
+        } else if (p==3){
+            System.out.println(&quot;You have chosen Parallelogram for counting area... \n put the base of the Parallelogram:&quot;);
+            int x = ss.nextInt();
+            System.out.println(&quot;put the height of the Parallelogram:&quot;);
+            int y = ss.nextInt();
+            qua.Parallelogram(x,y);
+        } else if (p==4){
+            System.out.println(&quot;You have chosen Rhombus for counting area... \n put a diagonal of the Rhombus:&quot;);
+            int x = ss.nextInt();
+            System.out.println(&quot;put the other diagonal of the Rhombus:&quot;);
+            int y = ss.nextInt();
+            qua.Rhombus(x,y);
+        } else if (p==5){
+            System.out.println(&quot;You have chosen Trapezium for counting area... \n put a length of a parallel side  of the Trapezium:&quot;);
+            int x = ss.nextInt();
+            System.out.println(&quot;put the length of other parallel side of the Trapezium: &quot;);
+            int y = ss.nextInt();
+            System.out.println(&quot;Put the distance of these parallel sides:&quot;);
+            int z = ss.nextInt();
+            qua.Trapezium(x,y,z);
+        } else if (p==6){
+            System.out.println(&quot;You have chosen Kite for counting area... \n put a diagonal of the Kite:&quot;);
+            int x = ss.nextInt();
+            System.out.println(&quot;put the other diagonal of the Kite:&quot;);
+            int y = ss.nextInt();
+            qua.Kite(x,y);
+        }
+        else {
+            System.out.println(&quot;Error value. \nYOU HAVE TO PUT FROM 1 TO 6..... &quot;);
+
+        }
+    }
+}</code></pre><h3 id="57bd9756-bfe2-4508-b204-784e824ce34e" class="">Output :</h3><pre id="c6bca397-a580-4814-b517-7708ffb09a1c" class="code"><code>What type of Quadrangular&#x27;s area do you want to calculate? 
+ 1.Square 
+ 2.Rectangle 
+ 3.Parallelogram 
+ 4.Rhombus 
+ 5.Trapezium 
+ 6.Kite 
+ Type a number which you want:5
+You have chosen Trapezium for counting area... 
+ put a length of a parallel side  of the Trapezium:
+5
+put the length of other parallel side of the Trapezium: 
+4
+Put the distance of these parallel sides:
+7
+The area of a the Trapezium is: 
+ .5x(5+4)x7 
+ =31.5 unit square
+
+Process finished with exit code 0</code></pre><h2 id="7c04947f-2268-48aa-8ab9-c4b3ec3ecc30" class=""><mark class="highlight-blue"><span style="border-bottom:0.05em solid">2. Write a Java program to check if a number is even or odd.</span></mark></h2><pre id="9bff001c-b264-4b79-a8c3-467e6cec86a0" class="code code-wrap"><code>package Practice_problem_2;
+
+import java.util.Scanner;
+
+public class CheckOddEven {
+   public void num(int x){
+       if (x%2 ==0){
+           System.out.println(&quot;This is Even&quot;);
+       } else {
+           System.out.println(&quot;This is Odd&quot;);
+       }
+   }
+
+    public static void main(String[] args) {
+        CheckOddEven c = new CheckOddEven();
+        Scanner s = new Scanner(System.in);
+        for ( ; ; ){
+        System.out.println(&quot;Enter a number:&quot;);
+        int n = s.nextInt();
+        c.num(n);
+    }
+   }
+}</code></pre><h3 id="9bdfad6e-e4af-496d-ac2c-35277ea56af9" class="">
+Output:</h3><h2 id="0879c8e6-dd87-45ec-b0f9-c7b0b822fd6d" class=""><span style="border-bottom:0.05em solid"><mark class="highlight-blue">3. Write a Java program to find the factorial of a number.</mark></span></h2><pre id="81b2dc1f-b6e6-41e1-b842-293ebe19c457" class="code code-wrap"><code>package Practice_problem_2;
+
+import java.util.Scanner;
+
+public class Factorial {
+        public void fact(int x){
+            int mul = 1;
+
+            while (  x&gt;=1) {
+                mul = mul * x;
+                x--;
+
+            }
+            System.out.println(&quot; The factorial value is : &quot; + mul );
+
+        }
+
+        public static void main(String[] args) {
+            Factorial pm = new Factorial();
+            Scanner sc = new Scanner(System.in);
+            System.out.println(&quot; Enter any number: &quot;);
+            int sp = sc.nextInt();
+            pm.fact(sp);
+        }
+    }</code></pre><h3 id="8bc058fa-cc9c-47ca-bb0b-57baa6ae9760" class="">Output:</h3><pre id="333533d1-8975-4140-b4a7-ca7f4d654044" class="code code-wrap"><code>Enter any number: 
+5
+ The factorial value is : 120
+
+Process finished with exit code 0</code></pre><p id="a2ad3a8b-cf32-4d7f-95b6-2fc6ccda5b4a" class="">
+</p><h2 id="3e9a346e-170d-4035-8080-9611a8e5a455" class=""><span style="border-bottom:0.05em solid"><mark class="highlight-blue">4. Write a Java program to swap two numbers without using a temporary variable.</mark></span></h2><pre id="bcc8b1ff-989b-4955-ab42-09eae808f15e" class="code code-wrap"><code>&quot;C:\Program Files\Java\jdk1.8.0_181\bin\java.exe&quot;
+
+Enter a number:
+7
+This is Odd
+Enter a number:
+5
+This is Odd
+Enter a number:
+8
+This is Even
+Enter a number:
+4
+This is Even
+Enter a number:
+56
+This is Even
+Enter a number:</code></pre><pre id="b0d3fe8d-3714-49c9-a37e-3d8d57145675" class="code code-wrap"><code>package Practice_problem_2;
+
+import javax.script.ScriptContext;
+import java.util.Scanner;
+
+public class SwappingTwoNumbers {
+    public void nums(int x, int y){
+        x= x+y;
+        y=x-y;
+        x=x-y;
+        System.out.println(&quot;The Swapping value is: \nSwapping first value, A: &quot; +x+&quot;\nSwapping Second value, B: &quot; +y);
+    }
+
+    public static void main(String[] args) {
+        SwappingTwoNumbers STN = new SwappingTwoNumbers();
+        Scanner ss = new Scanner(System.in);
+        System.out.print(&quot;Enter the first value A: &quot;);
+        int a = ss.nextInt();
+        System.out.print(&quot;Enter the second value B: &quot;);
+        int b = ss.nextInt();
+        STN.nums(a,b);
+
+    }
+}</code></pre><h3 id="3550ec01-8409-4471-957f-631b34c079c1" class="">Output:</h3><pre id="6151f8d1-b4ce-4a73-b7c8-ab98d8a15cea" class="code code-wrap"><code>Enter the first value A:66
+Enter the second value B:77
+The Swapping value is: 
+Swapping first value, A: 77
+Swapping Second value, B: 66
+
+Process finished with exit code 0</code></pre><h2 id="1d7e3804-438a-486c-9a1c-d4b620faeada" class=""><span style="border-bottom:0.05em solid"><mark class="highlight-blue">5. Write a Java program to find the sum of natural numbers up to a given limit.</mark></span></h2><pre id="4f05b85d-065f-4fc0-9b0e-30797bf264d8" class="code code-wrap"><code>package Practice_problem_2;
+
+import java.util.Scanner;
+
+public class Summation {
+    public void summation(int x){
+        int sum=0;
+        while(x&gt;=0){
+            sum=sum+x;
+            x--;
+        }
+        System.out.println(&quot;the total summation of natural num of your given limit is: &quot; +sum);
+    }
+
+    public static void main(String[] args) {
+        Summation sm = new Summation();
+        Scanner ss = new Scanner(System.in);
+        System.out.print(&quot;Enter the limit of your summation: &quot;);
+        int s=ss.nextInt();
+        sm.summation(s);
+
+    }
+}</code></pre><h3 id="93a0b4ad-64ae-45c9-817c-3e59eb09850d" class="">Output:</h3><pre id="a897b524-5b49-4922-a8bd-16a91911ea55" class="code code-wrap"><code>Enter the limit of your summation: 8
+the total summation of natural num of your given limit is: 36
+
+Process finished with exit code 0</code></pre><p id="db9c42a5-57ae-418d-940e-41c6473d4cfd" class="">
+</p><h2 id="f9241c34-26c7-4102-8300-eab4fdc11e56" class=""><span style="border-bottom:0.05em solid"><mark class="highlight-blue">6. Write a Java program to check if a given year is a leap year.</mark></span></h2><pre id="356c26ef-8f51-4bab-aee7-290abc79bb8b" class="code code-wrap"><code>package Practice_problem_2;
+import java.util.Scanner;
+
+public class LeapYear {
+    public void  leapyear(int year) {
+        boolean isLeapYear = (year % 400 == 0) || ((year % 4 == 0) &amp;&amp; (year % 100 != 0));
+        if (isLeapYear) {
+            System.out.println(&quot;The year is a leap year.&quot;);
+        } else {
+            System.out.println(&quot;The year is not a leap year.&quot;);
+        }
+    }
+
+        public static void main(String[] args) {
+            LeapYear LY = new LeapYear();
+            Scanner scanner = new Scanner(System.in);
+            System.out.print(&quot;Enter a year: &quot;);
+            int year = scanner.nextInt();
+            LY.leapyear(year);
+
+        }
+    }</code></pre><h3 id="a577342d-2e1f-408a-8414-a54ea6b2e010" class="">Output:</h3><pre id="e7d62b69-4551-4fad-9fda-4c5b2a6d2b90" class="code code-wrap"><code>Enter a year: 1700
+The year is not a leap year.
+
+Process finished with exit code 0</code></pre><p id="b2ca60cb-0e64-45a5-a645-01ecead98c97" class="">
+</p><h2 id="53f06077-4786-468c-9466-cc7b4c2a10a6" class=""><span style="border-bottom:0.05em solid"><mark class="highlight-blue">7. Write a Java program to find the maximum number among three given numbers.</mark></span></h2><pre id="18bccfa9-50b9-42ff-858f-c9b60ca89b06" class="code code-wrap"><code>package Practice_problem_2;
+
+import java.util.Scanner;
+
+public class MaxNum {
+    public void max(int x, int y, int z){
+        if(x&gt;y &amp;&amp; x&gt;z){
+            System.out.println(&quot;The Maximum num is : &quot; +x);
+        } else if (x&gt;y &amp;&amp; x&lt;z) {
+            System.out.println(&quot;The Maximum num is : &quot; +z);
+        } else {
+            System.out.println(&quot;The Maximum num is : &quot; +y);
+        }
+    }
+
+    public static void main(String[] args) {
+        MaxNum m = new MaxNum();
+        Scanner s = new Scanner(System.in);
+        System.out.println(&quot;input the first num:&quot;);
+        int k = s.nextInt();
+        System.out.println(&quot;input the Second num:&quot;);
+        int l = s.nextInt();
+        System.out.println(&quot;input the Third num:&quot;);
+        int n = s.nextInt();
+        m.max(k,l,n);
+    }
+}</code></pre><h2 id="8faaa9c2-cbd2-4a11-ab17-5132b6752891" class="">Output:</h2><pre id="d97c92fb-be06-4260-8b0f-9d142047c5a2" class="code code-wrap"><code>input the first num:
+5
+input the Second num:
+2
+input the Third num:
+8
+The Maximum num is :8
+
+Process finished with exit code 0</code></pre><p id="456b259e-812b-459a-97ad-2cb7bd682b87" class="">
+</p><h2 id="530ccf8f-a162-4203-86fc-6bb35743928e" class=""><span style="border-bottom:0.05em solid"><mark class="highlight-blue">8. Write a Java program to check if a given string is a palindrome.</mark></span></h2><pre id="4888153d-4e7e-4836-84e2-6f8dc7b3aa8e" class="code code-wrap"><code>package Practice_problem_2;
+
+
+import java.util.Scanner;
+
+public class Palindrom {
+    //public void pal (String s){
+    public static boolean  pal(String s ){
+
+        int left = 0 ;
+        int right = s.length()-1;
+        while( left&lt;right){
+            if (s.charAt(left) != s.charAt(right)){
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+
+    }
+
+    public static void main(String[] args) {
+        Palindrom pm = new Palindrom();
+        Scanner sc = new Scanner(System.in);
+        for ( ; ; ) {
+            System.out.println(&quot;Enter the word: &quot;);
+            String ss = sc.nextLine();
+            pm.pal(ss);
+            if (pal(ss)){
+                System.out.println( ss  + &quot; : This is palindrom&quot;);
+            }
+            else {
+                System.out.println(ss + &quot;: This is not palindrom&quot;);
+            }
+        }
+    }
+}</code></pre><h3 id="cc26a043-8048-47d1-bda2-ff6deb458310" class="">output:</h3><pre id="7bbbde3b-3e3b-4aa5-a5df-a6b9c50b8966" class="code code-wrap"><code>Enter the word: 
+abba
+abba : This is palindrom
+Enter the word: 
+kaka
+kaka: This is not palindrom
+Enter the word: 
+kaak
+kaak : This is palindrom/</code></pre><h2 id="181623ec-3ada-4d04-bcd6-8eabfc08df15" class=""><mark class="highlight-blue">9. Write a Java program to calculate the average of numbers in an array.</mark></h2><pre id="01356f01-b81e-4c08-8108-7987470a108c" class="code code-wrap"><code>package Practice_problem_2;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Avg_num {
+public void ar(int [] a){
+    int l = a.length;
+    float sum =0;
+    for (int i=0;i&lt;l;i++){
+        sum=sum+a[i];
+    }
+    float p = sum/l;
+    System.out.println(&quot;the average vaule of the array is:&quot;  + p );
+}
+
+    public static void main(String[] args) {
+        Avg_num avn= new Avg_num();
+        Scanner s = new Scanner(System.in);
+        System.out.println(&quot;input the length of the array:&quot;);
+        int l =s.nextInt();
+        int[] a = new int[l];
+        for(int i=0;i&lt;l;i++){
+            System.out.println(&quot;input the value for:&quot; +(i+1));
+            int v =s.nextInt();
+            a[i]=v;
+        }
+        System.out.println(&quot;the array is :&quot;+Arrays.toString(a));
+        avn.ar(a);
+
+
+    }
+}</code></pre><h3 id="dea9a5fc-fa86-4fb8-937b-936a59ba0de4" class="">output:</h3><pre id="19970ef0-6f41-4ca1-8f49-e887db2e11ff" class="code code-wrap"><code>input the length of the array:
+5
+input the value for:1
+2
+input the value for:2
+3
+input the value for:3
+4
+input the value for:4
+5
+input the value for:5
+6
+the array is :[2, 3, 4, 5, 6]
+the average vaule of the array is:4.0
+
+Process finished with exit code 0</code></pre><h2 id="d8c71d72-2256-4db1-9e2b-a4b104257462" class=""><mark class="highlight-blue"><span style="border-bottom:0.05em solid">10.Write a Java program to check if two strings are anagrams</span></mark></h2><pre id="f401b652-86d8-4486-884a-0e3ecb23b62d" class="code code-wrap"><code>package Practice_problem_2;
+
+public class anagrams {
+    
+    public static void main(String[] args) {
+        String str1 = &quot;hello&quot;;
+        String str2 = &quot;olleh&quot;;
+
+        boolean ana =isAnagram(str1, str2);
+
+        if (ana) {
+            System.out.println(&quot;The strings are anagrams.&quot;);
+        } else {
+            System.out.println(&quot;The strings are not anagrams.&quot;);
+        }
+    }
+
+    private static boolean isAnagram(String str1, String str2) {
+        if (str1.length() != str2.length()) {
+            return false;
+        }
+
+        int[] charCount = new int[256];
+
+        for (int i = 0; i &lt; str1.length(); i++) {
+            char ch = str1.charAt(i);
+            System.out.println(ch);
+            charCount[ch]++;
+            System.out.println(charCount[ch]);
+        }
+
+        for (int i = 0; i &lt; str2.length(); i++) {
+            char ch = str2.charAt(i);
+            System.out.println(ch);
+            charCount[ch]--;
+            System.out.println(charCount[ch]);
+        }
+
+        for (int i = 0; i &lt; 256; i++) {
+            if (charCount[i] != 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+}</code></pre><h3 id="a92ac1f2-e262-44e7-b5b0-2c7d216a9247" class="">Output:</h3><pre id="0f7375b3-074c-4633-9e1a-f48d39f5fd17" class="code code-wrap"><code>The strings are anagrams.</code></pre><h1 id="55a1a294-c0a2-4e12-aba9-e0ae3e2a8a26" class="">OR,</h1><pre id="e92154f0-4520-45d8-8b4d-f658f4c1c28a" class="code code-wrap"><code>package Practice_problem_2;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Anagram {
+    public void anagram(String a, String b){
+        a = a.toLowerCase();
+        b = b.toLowerCase();
+
+        // check if length is same
+        if(a.length() == b.length()) {
+
+            // convert strings to char array
+            char[] charArray1 = a.toCharArray();
+            char[] charArray2 = b.toCharArray();
+            System.out.println(&quot;Tha arrays of these words are:\n1.&quot;+ Arrays.toString(charArray1)+&quot;\n2.&quot;+Arrays.toString(charArray2) );
+            // sort the char array
+            Arrays.sort(charArray1);
+            System.out.println(&quot;by sorting 1st array:&quot; + Arrays.toString(charArray1));
+            Arrays.sort(charArray2);
+            System.out.println(&quot;by sorting 1st array:&quot; + Arrays.toString(charArray2));
+            boolean result = Arrays.equals(charArray1, charArray2);
+
+            if(result) {
+                System.out.println(a + &quot; and &quot; + b + &quot; are anagram.&quot;);
+            }
+            else {
+                System.out.println(a + &quot; and &quot; + b + &quot; are not anagram.&quot;);
+            }
+        }
+
+    }
+
+    public static void main(String[] args) {
+        Anagram ang = new Anagram();
+        Scanner ss = new Scanner(System.in);
+        System.out.println(&quot;type the first Word:&quot;);
+        String a = ss.nextLine();
+        System.out.println(&quot;Type the second Word:&quot;);
+        String b = ss.nextLine();
+        ang.anagram(a,b);
+
+    }
+
+
+    }</code></pre><h3 id="f5901bf6-2964-4203-a56e-a409b3d57ddb" class="">Output:</h3><pre id="0bf71061-6204-4f81-85f7-e74fcde284db" class="code code-wrap"><code>type the first Word:
+listen
+Type the second Word:
+silent
+Tha arrays are:
+1.[l, i, s, t, e, n]
+2.[s, i, l, e, n, t]
+by sorting 1st array:[e, i, l, n, s, t]
+by sorting 1st array:[e, i, l, n, s, t]
+listen and silent are anagram.
+
+Process finished with exit code 0</code></pre><h2 id="d40d057e-b739-4e81-82b6-a9fd5c845eb9" class=""><mark class="highlight-blue"><span style="border-bottom:0.05em solid"><strong>11. Write a Java program to count the occurrence of a character in a string.</strong></span></mark></h2><pre id="0cc87f2a-e8aa-4720-9d3f-6ff8609ef20f" class="code code-wrap"><code>package Practice_problem_2;
+
+import javax.script.ScriptContext;
+import java.util.Scanner;
+
+public class CharacterOccurrence {
+    public void occ(String s, char c){
+        int count=0;
+        int n=s.length();
+        for (int i = 0; i&lt;n; i++){
+            if(c == s.charAt(i)){
+                count++;
+            }
+        }
+        System.out.println(c + &quot; is &quot;+ count+ &quot; times in the word&quot;);
+    }
+
+    public static void main(String[] args) {
+        CharacterOccurrence co = new CharacterOccurrence();
+        Scanner ss = new Scanner(System.in);
+        System.out.println(&quot;Input a word:&quot;);
+        String s= ss.nextLine();
+        System.out.println(&quot;which letter do you want to count:&quot;);
+        char c = ss.next().charAt(0);
+        co.occ(s,c);
+    }
+}</code></pre><h3 id="7a430324-bbbc-45e7-b627-7d520a801ee8" class="">output:</h3><pre id="b8e55ab6-1453-4a20-b550-798d5edc9670" class="code code-wrap"><code>Input a word:
+banana
+which letter do you want to count:
+n
+n is 2 times in the word
+
+Process finished with exit code 0</code></pre><p id="c000dd91-0ddc-431c-adb2-1e4608396f7e" class="">
+</p><h2 id="ba73e857-df83-4a3d-ae31-1b15e56ac304" class=""><mark class="highlight-blue"><span style="border-bottom:0.05em solid">12. </span></mark><span style="border-bottom:0.05em solid"><mark class="highlight-blue"><strong>Write a Java program to find the power of a number:</strong></mark></span></h2><pre id="11379f27-b562-4c52-865f-2b20cb98ed41" class="code code-wrap"><code>package Practice_problem_2;
+
+import java.util.Scanner;
+
+public class PowerOFaNumber {
+    public void power(int exponent , int b){
+        long power = 1;
+        for (int i = 0; i &lt; exponent; i++) {
+            power *= b;
+        }
+
+        System.out.println(b + &quot; to the power of &quot; + exponent + &quot; is &quot; + power);
+    }
+
+    public static void main(String[] args) {
+
+        PowerOFaNumber pw = new PowerOFaNumber();
+        Scanner s = new Scanner(System.in);
+        System.out.println(&quot;input the exponent:&quot;);
+        int e = s.nextInt();
+        System.out.println(&quot;input the base:&quot;);
+        int b = s.nextInt();
+        pw.power(e,b);
+    }
+}</code></pre><h3 id="64f26c41-c5c6-47df-8734-8760dbfbf3e0" class="">output:</h3><pre id="9d1a99fd-f5be-44fd-8836-3e1f53428a7b" class="code code-wrap"><code>input the exponent:
+3
+input the base:
+2
+2 to the power of 3 is 8
+
+Process finished with exit code 0</code></pre><h2 id="e0092c9f-a9f6-4308-a9f1-954fbe13a113" class=""><span style="border-bottom:0.05em solid"><mark class="highlight-blue">13. Write a Java program to find the frequency of elements in an array:</mark></span></h2><pre id="0074ca93-f0ba-4a70-941d-b9d14ab8d38a" class="code code-wrap"><code>package Practice_problem_2;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class FrequencyOfElements {
+    public void frequency(int [] array){
+        Map&lt;Integer, Integer&gt; freq = new HashMap&lt;&gt;();
+        for (int element : array) {
+            if (freq.containsKey(element)) {
+                freq.put(element, freq.get(element) + 1);
+            } else {
+                freq.put(element, 1);
+            }
+        }
+
+        // Print the frequency of each element.
+        System.out.println(&quot;The frequency of each element is:&quot;);
+        for (Map.Entry&lt;Integer, Integer&gt; entry : freq.entrySet()) {
+            System.out.println(entry.getKey() + &quot; : &quot; + entry.getValue());
+        }
+    }
+
+    public static void main(String[] args) {
+        FrequencyOfElements fe = new FrequencyOfElements();
+        Scanner ss = new Scanner(System.in);
+        System.out.println(&quot;input the range of your array:&quot;);
+        int n = ss.nextInt();
+        int [] array = new int[n];
+        for (int x = 0 ; x&lt;=n-1; x++){
+            System.out.println(&quot;input the value for &quot; + x + &quot; :&quot;);
+            int p = ss.nextInt();
+            array[x]=p;
+        }
+        System.out.println(&quot;the array is : &quot; + Arrays.toString(array));
+        fe.frequency(array);
+    }
+}</code></pre><h3 id="ed264c0b-32cc-4990-9ac7-f59804f25235" class="">output:</h3><pre id="5fa047c8-3b6a-49c3-8178-c323e9737369" class="code code-wrap"><code>input the range of your array:
+5
+input the value for 0 :
+1
+input the value for 1 :
+3
+input the value for 2 :
+4
+input the value for 3 :
+2
+input the value for 4 :
+2
+the array is : [1, 3, 4, 2, 2]
+The frequency of each element is:
+1 : 1
+2 : 2
+3 : 1
+4 : 1
+
+Process finished with exit code 0</code></pre><h2 id="780ba973-6160-42db-880e-f566bd78f22e" class=""><span style="border-bottom:0.05em solid"><mark class="highlight-blue">14. Write a Java program to find the second smallest element in an array</mark></span></h2><p id="c9fb6365-736b-45e1-ac98-4c9d46552314" class="">
+</p><pre id="1843bf7b-6c75-4c69-a053-4b78864ceb9e" class="code code-wrap"><code>package Practice_problem_2;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class SecondSmallestElement {
+    public void small(int[] ary) {
+        int n = ary.length;
+        int temp = 0;
+        for (int i = 0; i &lt; n; i++) {
+            for (int j = 1; j &lt; (n - i); j++) {
+                if (ary[j - 1] &gt; ary[j]) {
+                    temp = ary[j];
+                    ary[j] = ary[j - 1];
+                    ary[j - 1] = temp;
+                }
+            }
+        }
+        System.out.println(&quot;the  rearrange array is : &quot; + Arrays.toString(ary));
+        System.out.println(&quot;the Second smallest element is:&quot; + ary[1]);
+    }
+
+    public static void main(String[] args) {
+        SecondSmallestElement s = new SecondSmallestElement();
+        Scanner ss = new Scanner(System.in);
+        System.out.println(&quot; input the range of your array:&quot;);
+        int n = ss.nextInt();
+        int [] array = new int[n];
+        for (int x = 0 ; x&lt;=n-1; x++){
+            System.out.println(&quot;input the value for &quot; + x + &quot; :&quot;);
+            int p = ss.nextInt();
+            array[x]=p;
+        }
+        System.out.println(&quot;the array is : &quot; + Arrays.toString(array));
+        s.small(array);
+    }
+    }</code></pre><h3 id="d345791b-c472-494f-874b-c58bb589c942" class="">or,</h3><pre id="9d4d93a6-04a1-475e-9473-265e8c31e870" class="code code-wrap"><code>package Practice_problem_2;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Secondsmallestarrays {
+    public void small(int [] ary){
+        Arrays.sort(ary);
+        System.out.println(&quot;the  rearrange array is : &quot; + Arrays.toString(ary));
+        System.out.println(&quot;the Second smallest element is:&quot; + ary[1]);
+    }
+    public static void main(String[] args) {
+        SecondSmallestElement s = new SecondSmallestElement();
+        Scanner ss = new Scanner(System.in);
+        System.out.println(&quot; input the range of your array:&quot;);
+        int n = ss.nextInt();
+        int [] array = new int[n];
+        for (int x = 0 ; x&lt;=n-1; x++){
+            System.out.println(&quot;input the value for &quot; + x + &quot; :&quot;);
+            int p = ss.nextInt();
+            array[x]=p;
+        }
+        System.out.println(&quot;the array is : &quot; + Arrays.toString(array));
+        s.small(array);
+    }
+}</code></pre><h3 id="29f014b3-9f7f-4400-ba24-e4f941988f1f" class="">output:</h3><pre id="38017777-8627-4b93-8efe-1bc9f5cc28ad" class="code code-wrap"><code>input the range of your array:
+5
+input the value for 0 :
+3
+input the value for 1 :
+6
+input the value for 2 :
+9
+input the value for 3 :
+8
+input the value for 4 :
+4
+the array is : [3, 6, 9, 8, 4]
+the  rearrange array is : [3, 4, 6, 8, 9]
+the Second smallest element is:4
+
+Process finished with exit code 0</code></pre><h2 id="9129762a-3276-48c8-b0d7-fde04cf6393f" class=""><span style="border-bottom:0.05em solid"><mark class="highlight-blue">15. Write a Java program to find the maximum difference between two elements in an array.</mark></span></h2><pre id="5eb559b6-12f2-4704-a976-98d61e09c4c9" class="code code-wrap"><code>package Practice_problem_2;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+import static jdk.nashorn.internal.objects.NativeMath.abs;
+import static sun.util.calendar.CalendarUtils.mod;
+
+public class Max_Diff {
+    public void small(int [] ary){
+        Arrays.sort(ary);
+        System.out.println(&quot;the  rearrange array is : &quot; + Arrays.toString(ary));
+        int l = ary.length;
+        int diff =0;
+        int p=0;
+        int a=0;
+        int b=0;
+        for (int i=0;i&lt;l-1;i++){
+            p= (Math.abs(ary[i+1]-ary[i]));
+            if(diff&lt;p){
+                diff=p;
+                 a = ary[i+1];
+                 b = ary[i];
+            }
+        }
+        System.out.println(&quot;the highest difference is: &quot;  + diff+ &quot;.\nwhich is between: &quot;+a+ &quot; and &quot;+b );
+    }
+    public static void main(String[] args) {
+        Max_Diff s = new Max_Diff();
+        Scanner ss = new Scanner(System.in);
+        System.out.println(&quot; input the range of your array:&quot;);
+        int n = ss.nextInt();
+        int [] array = new int[n];
+        for (int x = 0 ; x&lt;=n-1; x++){
+            System.out.println(&quot;input the value for &quot; + x + &quot; :&quot;);
+            int p = ss.nextInt();
+            array[x]=p;
+        }
+        System.out.println(&quot;the array is : &quot; + Arrays.toString(array));
+        s.small(array);
+    }
+}</code></pre><h3 id="7a4bd956-bf06-4097-9ea8-e9d81ad9e0ed" class="">Output:</h3><pre id="2d678af8-c7cf-4755-b816-0f3e95a5a938" class="code code-wrap"><code>&quot;C:\Program Files\Java\jdk1.8.0_181\bin\java.exe&quot; &quot;-&quot; Practice_problem_2.Max_Diff
+input the range of your array:
+5
+input the value for 0 :
+1
+input the value for 1 :
+5
+input the value for 2 :
+6
+input the value for 3 :
+4
+input the value for 4 :
+3
+the array is : [1, 5, 6, 4, 3]
+the  rearrange array is : [1, 3, 4, 5, 6]
+the highest difference is: 2.
+which is between: 3 and 1
+
+Process finished with exit code 0</code></pre><p id="b67ab5ac-228d-471c-b428-12eb4e69ad38" class="">
+</p><h2 id="faa39afd-c8e8-4354-a511-a9275c6f8135" class="">16.Write a Java program to rotate an array to the right by k positions</h2><pre id="987622af-ae8d-4416-9c1f-c6fbb699a2ae" class="code code-wrap"><code>package Practice_problem_2;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class RotateanArray {
+    public void rotate(int[] array, int k) {
+        int len = array.length;
+        int[] temp = new int[k];
+        for (int i = 0; i &lt; k; i++) {
+            temp[i] = array[i];
+        }
+        for (int i = k; i &lt; len; i++) {
+            array[i - k] = array[i];
+        }
+        for (int i = 0; i &lt; k; i++) {
+            array[len - k + i] = temp[i];
+        }
+        System.out.println(&quot;the array is:&quot; + Arrays.toString(array));
+
+    }
+
+    public static void main(String[] args) {
+        RotateanArray r = new RotateanArray();
+        Scanner ss = new Scanner(System.in);
+        System.out.println(&quot; input the range of your array:&quot;);
+        int n = ss.nextInt();
+        int [] array = new int[n];
+        for (int x = 0 ; x&lt;=n-1; x++){
+            System.out.println(&quot;input the value for &quot; + x + &quot; :&quot;);
+            int p = ss.nextInt();
+            array[x]=p;
+        }
+        System.out.println(&quot;the array is : &quot; + Arrays.toString(array));
+        System.out.println(&quot;input a value from where you want to break:&quot;);
+        int k =ss.nextInt();
+        r.rotate(array,k);
+    }
+}</code></pre><h3 id="fe4fce9a-e7bc-48e5-8a35-27633cf8a91f" class="">output:</h3><pre id="1951cc71-03a9-4c51-b6a8-257b37fbe97a" class="code code-wrap"><code>input the range of your array:
+5
+input the value for 0 :
+1
+input the value for 1 :
+2
+input the value for 2 :
+3
+input the value for 3 :
+4
+input the value for 4 :
+5
+the array is : [1, 2, 3, 4, 5]
+input a value from where you want to break:
+3
+the array is:[4, 5, 1, 2, 3]
+
+Process finished with exit code 0</code></pre><h2 id="1b63a1e2-effb-4e37-b146-5c0c5332033f" class=""><mark class="highlight-blue"><span style="border-bottom:0.05em solid">17. Write a Java program to find the sum of two numbers in a sorted array such that it equals a given target sum.</span></mark></h2><pre id="314957cf-6514-44c1-872f-a3bb3f4140c6" class="code code-wrap"><code>package Practice_problem_2;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class SumFinding {
+    public void array(int[] ary, int sum) {
+        int n = ary.length;
+        int temp = 0;
+        Arrays.sort(ary);
+        System.out.println(&quot;the  rearrange array is : &quot; + Arrays.toString(ary));
+        for (int i = 0; i &lt; n-1; i++) {
+            for (int j = i+1; j &lt;= n-1; j++) {
+                temp = (ary[i] + ary[j]);
+                if (temp == sum){
+                    System.out.println(&quot;from this array the sum of &quot; +ary[i]+ &quot; and &quot;+ary[j]+&quot; is equal to your given value &quot;+sum );
+                }
+            }
+            }
+        }
+
+    public static void main(String[] args) {
+        SumFinding s = new SumFinding();
+        Scanner ss = new Scanner(System.in);
+        System.out.println(&quot; input the range of your array:&quot;);
+        int n = ss.nextInt();
+        int [] array = new int[n];
+        for (int x = 0 ; x&lt;=n-1; x++){
+            System.out.println(&quot;input the value for &quot; + x + &quot; :&quot;);
+            int p = ss.nextInt();
+            array[x]=p;
+        }
+        System.out.println(&quot;the array is : &quot; + Arrays.toString(array));
+        System.out.println(&quot;your given summation:&quot;);
+        int k = ss.nextInt();
+        s.array(array, k);
+    }
+}</code></pre><h3 id="ade5b2c9-5d24-4720-a136-f23c6fa41b12" class="">Output:</h3><pre id="d6f2e6c4-6cd8-4a7c-b4f7-1513490277f1" class="code code-wrap"><code>input the range of your array:
+6
+input the value for 0 :
+1
+input the value for 1 :
+6
+input the value for 2 :
+2
+input the value for 3 :
+5
+input the value for 4 :
+3
+input the value for 5 :
+4
+the array is : [1, 6, 2, 5, 3, 4]
+your given summation:
+7
+the  rearrange array is : [1, 2, 3, 4, 5, 6]
+from this array the sum of 1 and 6 is equal to your given value 7
+from this array the sum of 2 and 5 is equal to your given value 7
+from this array the sum of 3 and 4 is equal to your given value 7
+
+Process finished with exit code 0</code></pre><p id="6b2d6349-3622-4a17-aca8-dbe21f97b41e" class="">
+</p></div></article></body></html>
